@@ -1,11 +1,6 @@
 # Import CSV Using NodeJS
 
-Programmer Blog: https://programmerblog.net/
-
-Source code for article on Import CSV file using nodejs and MongoDB
-
-You can read detailed tutorial on our blog: http://programmerblog.net/import-csv-file-using-nodejs/
-
+Source code on Import CSV file using nodejs and MongoDB
    
 1. Create a MongoDB database
 
