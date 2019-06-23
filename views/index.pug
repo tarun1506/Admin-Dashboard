@@ -1,0 +1,53 @@
+extends layout
+
+block content
+  br
+  h2 Client Dashboard
+  br
+  form(action='/upload' method='post' enctype='multipart/form-data')
+    input(type='file' name='CSVfile')
+    input(type='submit',value='upload') 
+  br
+  br
+
+  
+
+  p
+   a(href='javascript:void(0)' class='btn btn-primary' id='importdata') Import CSV 
+   | &nbsp;&nbsp;&nbsp;
+   a(href='javascript:void(0)' class='btn btn-primary' id='fetchdata') Fetch Data
+   br
+   br
+   a(href='javascript:void(0)' class='btn btn-primary' id='query1_store1') Query1 Store1
+   | &nbsp;&nbsp;&nbsp;
+   a(href='javascript:void(0)' class='btn btn-primary' id='query1_store2') Query1 Store2
+   | &nbsp;&nbsp;&nbsp;
+   br
+   br
+   a(href='javascript:void(0)' class='btn btn-primary' id='query2_store1') Query2 Store1
+   | &nbsp;&nbsp;&nbsp;
+   a(href='javascript:void(0)' class='btn btn-primary' id='query2_store2') Query2 Store2
+   | &nbsp;&nbsp;&nbsp;
+   br
+   br
+   a(href='javascript:void(0)' class='btn btn-primary' id='query3_millennial1') Query3 Store1 Millennial
+   | &nbsp;&nbsp;&nbsp;
+   a(href='javascript:void(0)' class='btn btn-primary' id='query3_generationz1') Query3 Store1 Generation Z
+   | &nbsp;&nbsp;&nbsp;
+   a(href='javascript:void(0)' class='btn btn-primary' id='query3_millennial2') Query3 Store2 Millennial
+   | &nbsp;&nbsp;&nbsp;
+   a(href='javascript:void(0)' class='btn btn-primary' id='query3_generationz2') Query3 Store2 Generation Z
+   | &nbsp;&nbsp;&nbsp; 
+
+
+  br  
+  p#message.alert.alert-success(style='display:none')
+  br
+  table.table.table-bordered
+    thead
+        tr
+            
+            th Store details	
+    tbody#trdata
+        tr
+            td(colspan='3') Click on <strong>Import CSV</strong> button to import and save data to MongoDB. <br />Click on <strong>Fetch Data</strong> button to display data from database
